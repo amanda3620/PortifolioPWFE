@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhora da página</title>
+</head>
+<header>
+    <div class="logo">
+        <img src="imagem/logo.png" id="icone" onmouseout="mudaFoto(6)">
+        <h1>Tech Master</h1>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" onmousemove='mudaFoto(1)' onmouseout='mudaFoto(6)'>Computador</a></li>
+            <li><a href="#" onmousemove='mudaFoto(2)' onmouseout='mudaFoto(6)'>Video Game</a></li>
+            <li><a href="#" onmousemove='mudaFoto(3)' onmouseout='mudaFoto(6)'>Celular</a></li>
+            <li><a href="#" onmousemove='mudaFoto(4)' onmouseout='mudaFoto(6)'>Quem somos</a></li>
+            <li><a href="#" onmousemove='mudaFoto(5)' onmouseout='mudaFoto(6)'' >Contato</a></li>
+        </ul>
+    </nav>
+    <script>
+    function mudaFoto(tipo){
+        if (tipo == 1 ){
+            document.getElementById("icone").src="imagem/computador.png"
+        }
+        else if(tipo == 2 ){
+            document.getElementById("icone").src="imagem/game.png"
+        }
+        else if(tipo == 3 ){
+            document.getElementById("icone").src="imagem/celular.png"
+        }
+        else if(tipo == 4){
+            document.getElementById("icone").src="imagem/somos.png"
+            
+        }
+        else if(tipo == 5){
+            document.getElementById("icone").src="imagem/contato.png"
+            
+        }
+        else {
+            document.getElementById("icone").src="imagem/logo.png"
+        }
+    }
+
+</script>
+</header>
+<body>
+       <div class="caixa">
+            <div class="box1">
+                <img src="img/imagem 2.png" onmousemove="mudaimg('img/imagem 2.png')" onmouseout="mudaimg('img/imagem 1.png')" 
+                onclick="mudaimg('img/imagem 2.png')" ondblclick="mudaimg('img/imagem 1.png')">
+                <img src="img/imagem 3.png" onmousemove="mudaimg('img/imagem 3.png')" onmouseout="mudaimg('img/imagem 1.png')"
+                onclick="mudaimg('img/imagem 3.png')" ondblclick="mudaimg('img/imagem 1.png')">
+                <img src="img/imagem 4.png" onmousemove="mudaimg('img/imagem 4.png')" onmouseout="mudaimg('img/imagem 1.png')"
+                onclick="mudaimg('img/imagem 1.png')" ondblclick="mudaimg('img/imagem 1.png')">
+            </div>
+                <div class="box2">
+                    <img src="img/imagem 1.png" id="foto">
+                </div>
+            <div class="box3">
+                <h2>Notebook Samsung Book Intel Core i5-1135G7 8GB SSD 256GB 15.6" Windows 11 Home</h2>
+                <p>O Samsung Book possui uma arquitetura de última geração e design elegante para quem busca qualidade, 
+                    desempenho e proteção do investimento. Conta com portas de acesso à memória e unidade de armazenamento, 
+                    facilitando o upgrade e proporcionando mais longevidade ao sistema. A familia Samsung Books traz uma variedade 
+                    de configurações, atendendo aos mais diversos perfis de utilização, seja para estudo, trabalho ou uso geral.</p>
+                <h3>Preço: 1.789,90</h3>
+                <button class="coisa cor">Comprar</button>
+            </div>
+
+       </div>
+       <script>
+        function mudaimg(item){
+            document.getElementById("foto").src=item
+        }
+       </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+           /* border: 1px solid black;*/
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background-color: #91B6C2;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #dfffff;
+               
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        header .logo img{
+            margin-right: 3em;
+        }
+        header nav li{
+            display: inline;
+            margin-right: 3em;
+        }
+        header nav li a{
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+        }
+        .caixa{
+            max-width: 90%;
+            height: 600px;
+           display: flex;
+           flex-direction: row;
+            margin: 1% auto;
+            background-color: #4c4c4c;
+            
+        }
+        .box1{
+            width: 20%;
+            height: 100%;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+
+        } 
+        .box1 img{
+            width: 100%;
+            height: 33.3%;
+            padding: 10px;
+            
+        }
+        .box2 img{
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            
+        }
+        .box2{
+            width: 50%;
+            height: 100%;
+            background-color: lightblue;
+        }
+        .box3{
+            width: 30%;
+            height: 100%;
+            background-color: #add8e6;
+        }
+        .box3 p{
+            margin-top: 10%;
+            text-align: center;
+            font-size: 23px;
+        }
+        .box3 h3{
+            margin-top: 5%;
+            font-size: 22px;
+        }
+        .coisa {
+            margin: 4% 33%;
+            width: 40%;
+            height: 9%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: large;
+        }
+
+        .cor{
+            background-color: #3498db;
+            color: white;
+        }
+        .cor:hover {
+            background-color: #2980b9;
+        }
+
+        
+    </style>
+
+</body>

@@ -1,0 +1,102 @@
+/*DOCUMENTO - CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*border: 1px solid black;*/
+}
+body {
+    font-family: sans-serif;
+    background-color: lightblue;
+   
+}
+header{
+    background-color: #54788A;
+    height: 60px;
+}
+header h1{
+    text-align: center;
+    padding: 1%;
+    color: aliceblue;
+}
+
+.imagens{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.imagens .foto {
+   max-width: 100%;
+   justify-content: space-around;
+   display: flex;
+   flex-direction: row;
+   
+}
+.foto img {
+    display: flex;
+    flex-direction: row;
+    max-width: 25%;
+    padding: 1%;
+    
+   
+    
+}
+
+.linha {
+    width: 95%;
+    margin: 4em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.coluna {
+    width: 21%;
+    margin: 1%;
+    background-color: #54788A;
+    height: 630px;
+    width: 23%;
+    
+}
+
+
+
+.coluna img{
+    max-width: 100%;
+    border-radius: 5%;
+   
+    
+    
+}
+
+h2 {
+    font-size: 25px;
+    
+}
+
+p {
+    font-size: larger;
+}
+
+
+
+@media screen and (max-width: 1128px) {
+
+    .coluna {
+        width:48%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .coluna {
+        width:100%;
+        margin: 0;
+    }
+
+}
